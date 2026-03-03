@@ -1,0 +1,150 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.rate-box {
+  background: linear-gradient(135deg, #f0f4f8 0%, #e8ecf1 100%);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.15);
+  text-align: center;
+  margin-bottom: 2rem;
+  min-width: 300px;
+}
+
+.rate-label {
+  font-size: 0.9rem;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.rate-value {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 0.5rem;
+}
+
+.sell-button {
+  padding: 0.9rem 2rem;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.sell-button:hover {
+  background: linear-gradient(135deg, #0056b3 0%, #003a7a 100%);
+  box-shadow: 0 6px 25px rgba(0, 123, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.chart-box {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 2rem;
+  max-width: 750px;
+  width: 100%;
+}
+
+.chart-box h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.info-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 2rem;
+  max-width: 700px;
+  text-align: left;
+  border-left: 4px solid #007bff;
+}
+
+.info-card h3 {
+  margin-top: 0;
+  color: #1a202c;
+  font-weight: 700;
+}
+
+.info-card p {
+  color: #718096;
+  line-height: 1.6;
+}
+
+.how-it-works {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 2rem;
+  max-width: 900px;
+  width: 100%;
+}
+
+.how-it-works h3 {
+  margin-top: 0;
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.step-content h4 {
+  margin: 0 0 0.3rem 0;
+  color: #1a202c;
+  font-size: 0.95rem;
+}
+
+.step-content p {
+  margin: 0;
+  color: #718096;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}

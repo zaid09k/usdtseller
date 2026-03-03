@@ -1,0 +1,125 @@
+.sell-container {
+  display: flex;
+  height: calc(100vh - 60px);
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+}
+
+.sell-form {
+  background: #f0f4f8;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  width: 360px;
+  text-align: center;
+}
+
+.sell-form h2 {
+  margin-bottom: 1.5rem;
+  color: #1a202c;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.sell-form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid #e0e6ed;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: white;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.sell-form input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.sell-form input::placeholder {
+  color: #a0aec0;
+}
+
+.sell-form button {
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.sell-form button:hover {
+  background: linear-gradient(135deg, #0056b3 0%, #003a7a 100%);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.network-selector {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.network-selector label {
+  font-size: 0.85rem;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.radio-label input[type="radio"] {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  accent-color: #007bff;
+}
+
+.radio-label:hover {
+  color: #007bff;
+}
+
+.conversion {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: #28a745;
+  font-weight: 600;
+  background: rgba(40, 167, 69, 0.1);
+  padding: 0.75rem;
+  border-radius: 6px;
+}
+
+.error {
+  color: #e53e3e;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  background: rgba(229, 62, 62, 0.1);
+  padding: 0.75rem;
+  border-radius: 6px;
+}
