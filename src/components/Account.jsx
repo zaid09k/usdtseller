@@ -3,7 +3,7 @@ import { useAuth } from './AuthProvider';
 import './Account.css';
 
 export default function Account() {
-  const { user, orders } = useAuth();
+  const { user, orders, logout } = useAuth();
 
   if (!user) {
     return <p>Please login to view account.</p>;
@@ -77,6 +77,12 @@ export default function Account() {
             <span className="contact">@zaidtx</span>
           </div>
         </div>
+      </div>
+
+      <div className="account-action">
+        <button className="logout-btn" onClick={logout}>
+          🚪 Sign Out
+        </button>
       </div>
     </div>
   );
