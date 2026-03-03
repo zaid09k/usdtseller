@@ -237,6 +237,7 @@
     height: auto;
     padding: 1rem;
     gap: 0.75rem;
+    position: sticky; /* ensure relative for absolute child */
   }
 
   .navbar-left {
@@ -251,7 +252,13 @@
 
   .navbar-right {
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  /* hide stats on small screens */
+  .navbar-stats {
+    display: none;
   }
 
   .navbar-logo {
@@ -271,5 +278,8 @@
   .signout-button {
     padding: 0.6rem 1rem;
     font-size: 0.8rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
   }
 }
