@@ -14,17 +14,37 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">USDT Seller</div>
-      <div className="navbar-links">
-        <NavLink to="/" end>
-          Home
-        </NavLink>
-        <NavLink to="/history">Order History</NavLink>
-        <NavLink to="/account">Account</NavLink>
+      <div className="navbar-left">
+        <div className="navbar-logo">
+          <span className="logo-icon">💰</span>
+          <span className="logo-text">USDT</span>
+        </div>
+        {/* status indicator removed for cleaner look */}
       </div>
-      <button className="signout-button" onClick={handleSignout}>
-        Sign out
-      </button>
+
+      <div className="navbar-links">
+        <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>
+          <span className="link-icon">🏠</span> Home
+        </NavLink>
+        <NavLink to="/history" className={({ isActive }) => isActive ? 'active' : ''}>
+          <span className="link-icon">📋</span> Orders
+        </NavLink>
+        <NavLink to="/account" className={({ isActive }) => isActive ? 'active' : ''}>
+          <span className="link-icon">👤</span> Account
+        </NavLink>
+      </div>
+
+      <div className="navbar-right">
+        <div className="navbar-stats">
+          <div className="stat-item">
+            <span className="stat-label">24h Volume</span>
+            <span className="stat-value">$125K+</span>
+          </div>
+        </div>
+        <button className="signout-button" onClick={handleSignout}>
+          <span>🚪</span> Sign Out
+        </button>
+      </div>
     </nav>
   );
 }
