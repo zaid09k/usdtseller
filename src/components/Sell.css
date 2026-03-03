@@ -3,65 +3,70 @@
   height: calc(100vh - 60px);
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  background: #121212;
 }
 
 .sell-form {
-  background: #f0f4f8;
+  background: linear-gradient(135deg, #1a1a1a 0%, #222 100%);
   padding: 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
   width: 360px;
   text-align: center;
+  border: 1px solid #333;
 }
 
 .sell-form h2 {
   margin-bottom: 1.5rem;
-  color: #1a202c;
+  color: #eee;
   font-size: 1.5rem;
   font-weight: 700;
 }
 
 .sell-form input {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 1rem;
   margin-bottom: 1rem;
-  border: 2px solid #e0e6ed;
+  border: 2px solid #3a3a3a;
   border-radius: 8px;
   font-size: 0.95rem;
-  background: white;
+  background: #1a1a1a;
+  color: #fff;
   box-sizing: border-box;
   transition: all 0.3s ease;
 }
 
 .sell-form input:focus {
   outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+  background: #1f1f1f;
 }
 
 .sell-form input::placeholder {
-  color: #a0aec0;
+  color: #888;
 }
 
 .sell-form button {
   width: 100%;
-  padding: 0.8rem;
+  padding: 1rem;
   background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 700;
-  font-size: 0.95rem;
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  font-size: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
   transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .sell-form button:hover {
   background: linear-gradient(135deg, #0056b3 0%, #003a7a 100%);
-  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
-  transform: translateY(-1px);
+  box-shadow: 0 8px 28px rgba(0, 123, 255, 0.4);
+  transform: translateY(-2px);
 }
 
 .network-selector {
@@ -71,12 +76,12 @@
 
 .network-selector label {
   font-size: 0.85rem;
-  color: #718096;
+  color: #0ea5e9;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  font-weight: 600;
+  font-weight: 700;
   display: block;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .radio-group {
@@ -90,7 +95,7 @@
   gap: 0.5rem;
   cursor: pointer;
   font-size: 0.9rem;
-  color: #333;
+  color: #ccc;
   font-weight: 500;
 }
 
@@ -102,17 +107,18 @@
 }
 
 .radio-label:hover {
-  color: #007bff;
+  color: #0ea5e9;
 }
 
 .conversion {
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
   font-size: 0.95rem;
-  color: #28a745;
-  font-weight: 600;
-  background: rgba(40, 167, 69, 0.1);
-  padding: 0.75rem;
-  border-radius: 6px;
+  color: #10b981;
+  font-weight: 700;
+  background: rgba(16, 185, 129, 0.15);
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 3px solid #10b981;
 }
 
 .error {
@@ -122,58 +128,4 @@
   background: rgba(229, 62, 62, 0.1);
   padding: 0.75rem;
   border-radius: 6px;
-}
-
-.sell-address {
-  margin-left: 1.5rem;
-  background: #fff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
-  max-width: 420px;
-}
-
-.sell-address h4 {
-  margin: 0 0 0.75rem 0;
-  color: #1a202c;
-}
-
-.address-row {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.address-label {
-  font-size: 0.85rem;
-  color: #718096;
-  min-width: 80px;
-}
-
-.address-value {
-  flex: 1;
-  font-family: monospace;
-  background: #f7fafc;
-  padding: 0.6rem 0.75rem;
-  border-radius: 8px;
-  border: 1px solid #edf2f7;
-  color: #2d3748;
-  font-size: 0.9rem;
-  overflow-wrap: anywhere;
-}
-
-.copy-btn {
-  padding: 0.5rem 0.8rem;
-  background: linear-gradient(135deg,#007bff 0%,#0056b3 100%);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 700;
-}
-
-.address-note {
-  margin-top: 0.75rem;
-  font-size: 0.85rem;
-  color: #718096;
 }

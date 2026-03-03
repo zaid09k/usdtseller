@@ -11,30 +11,6 @@ export default function Sell() {
   const { user } = useAuth();
   const rate = 116.73; // INR per USDT
   const minAmount = 50;
-  // Network receiving addresses
-  const ADDRESSES = {
-    TRC20: 'TPt6WUZS16dvKw2pjxES44kezmYX2HSJMt',
-    BEP20: '0x8e98731e7b7786f21713e0ebb0681dc0f34cb585',
-  };
-  const [copied, setCopied] = useState('');
-
-  const copyAddress = async (addr) => {
-    try {
-      await navigator.clipboard.writeText(addr);
-      setCopied(addr);
-      setTimeout(() => setCopied(''), 2000);
-    } catch (err) {
-      // fallback
-      const el = document.createElement('textarea');
-      el.value = addr;
-      document.body.appendChild(el);
-      el.select();
-      document.execCommand('copy');
-      document.body.removeChild(el);
-      setCopied(addr);
-      setTimeout(() => setCopied(''), 2000);
-    }
-  };
 
   const converted = () => {
     const q = parseFloat(quantity);
@@ -110,18 +86,6 @@ export default function Sell() {
         )}
         <button type="submit">Continue</button>
       </form>
-      
-      <div className="sell-address">
-        <h4>Send USDT To</h4>
-        <div className="address-row">
-          <div className="address-label">{network} address</div>
-          <div className="address-value">{ADDRESSES[network]}</div>
-          <button className="copy-btn" onClick={() => copyAddress(ADDRESSES[network])}>
-            {copied === ADDRESSES[network] ? 'Copied' : 'Copy'}
-          </button>
-        </div>
-        <div className="address-note">Make sure you send via the selected network ({network}). Wrong network transfers may be lost.</div>
-      </div>
     </div>
   );
 }

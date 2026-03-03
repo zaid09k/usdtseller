@@ -1,14 +1,16 @@
 .account-container {
   padding: 2rem;
-  background: #f0f4f8;
+  background: #1a1a1a;
   border-radius: 12px;
 }
 
 .account-container h2 {
   margin-bottom: 2rem;
-  color: #1a202c;
-  font-weight: 700;
-  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .account-grid {
@@ -19,65 +21,68 @@
 }
 
 .account-card {
-  background: white;
+  background: linear-gradient(135deg, #1a1a1a 0%, #222 100%);
   padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  border-top: 3px solid #007bff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.1);
+  border-top: 4px solid #0ea5e9;
   transition: all 0.3s ease;
+  border: 1px solid #333;
 }
 
 .account-card:hover {
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.15);
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
   transform: translateY(-2px);
 }
 
 .account-card label {
   display: block;
-  font-size: 0.8rem;
-  color: #718096;
+  font-size: 0.75rem;
+  color: #0ea5e9;
   margin-bottom: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-weight: 600;
+  letter-spacing: 1px;
+  font-weight: 700;
 }
 
 .account-card .value {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #007bff;
+  color: #0ea5e9;
 }
 
 .chart-section {
-  background: white;
+  background: #222;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .chart-section h3 {
   margin-top: 0;
   margin-bottom: 1.5rem;
-  color: #1a202c;
+  color: #eee;
   font-weight: 700;
   font-size: 1.1rem;
 }
 
 .support-section {
-  background: linear-gradient(135deg, #e0f2fe 0%, #f0f7ff 100%);
-  border: 2px solid #3b82f6;
-  padding: 2rem;
-  border-radius: 12px;
-  margin-top: 2rem;
+  background: linear-gradient(135deg, #0ea5e9 0%, #0096d6 100%);
+  border: 2px solid #0ea5e9;
+  padding: 2.5rem;
+  border-radius: 16px;
+  margin-top: 3rem;
   text-align: center;
+  box-shadow: 0 10px 30px rgba(14, 165, 233, 0.2);
 }
 
 .support-section h3 {
   margin-top: 0;
-  color: #1a202c;
-  font-weight: 700;
-  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 .support-content {
@@ -92,17 +97,18 @@
 }
 
 .support-content p {
-  color: #1a202c;
-  font-size: 0.95rem;
+  color: #fff;
+  font-size: 1rem;
   line-height: 1.6;
   margin: 0;
+  font-weight: 500;
 }
 
 .support-message {
-  background: white;
+  background: #222;
   padding: 1.25rem;
   border-radius: 8px;
-  border-left: 4px solid #007bff;
+  border-left: 4px solid #0ea5e9;
   text-align: left;
   width: 100%;
   max-width: 400px;
@@ -110,20 +116,23 @@
 
 .support-message strong {
   display: block;
-  color: #007bff;
+  color: #0ea5e9;
   font-size: 0.95rem;
   margin-bottom: 0.5rem;
 }
 
 .support-message span {
   display: block;
-  color: #718096;
+  color: #aaa;
   font-size: 0.85rem;
   line-height: 1.6;
 }
 
 .contact {
-  color: #007bff;
+  color: #fff;
   font-weight: 700;
   font-family: 'Courier New', monospace;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
 }

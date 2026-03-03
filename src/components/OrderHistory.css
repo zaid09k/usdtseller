@@ -1,43 +1,46 @@
 .history-container {
   padding: 2rem;
-  background: #f0f4f8;
+  background: linear-gradient(135deg, #1a1a1a 0%, #222 100%);
   border-radius: 12px;
+  border: 1px solid #333;
 }
 
 .history-container h2 {
   margin-bottom: 1.5rem;
-  color: #1a202c;
-  font-weight: 700;
+  color: #fff;
+  font-weight: 800;
   font-size: 1.5rem;
+  text-transform: uppercase;
 }
 
 .history-table {
   width: 100%;
   border-collapse: collapse;
-  background: white;
+  background: #222;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .history-table th,
 .history-table td {
   padding: 1rem;
   text-align: left;
-  border-bottom: 1px solid #e0e6ed;
+  border-bottom: 1px solid #444;
 }
 
 .history-table th {
-  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
-  color: white;
+  background: #0ea5e9;
+  color: #fff;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.85rem;
   letter-spacing: 0.5px;
+  padding: 1rem;
 }
 
 .history-table tr:hover {
-  background: #f8fbff;
+  background: #333;
 }
 
 .history-table tr:last-child td {
@@ -71,6 +74,6 @@
 .history-table .order-id-cell {
   font-family: 'Courier New', monospace;
   font-weight: 700;
-  color: #007bff;
+  color: #0ea5e9;
   font-size: 0.85rem;
 }
