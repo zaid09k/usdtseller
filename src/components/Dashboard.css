@@ -156,7 +156,7 @@
   }
 
   .rate-box {
-    padding: 1.5rem;
+    padding: 2rem;
     min-width: auto;
     max-width: 100%;
   }
@@ -166,8 +166,8 @@
   }
 
   .sell-button {
-    padding: 0.8rem 2rem;
-    font-size: 0.9rem;
+    padding: 0.9rem 2rem;
+    font-size: 0.95rem;
   }
 
   .how-it-works {
@@ -176,7 +176,7 @@
 
   .steps-container {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .info-card {
@@ -190,22 +190,27 @@
   }
 
   .rate-box {
-    padding: 1rem;
+    padding: 1.5rem;
     margin-bottom: 1.5rem;
   }
 
   .rate-value {
-    font-size: 2rem;
+    font-size: 2.2rem;
+  }
+
+  .rate-box h3 {
+    font-size: 0.9rem;
   }
 
   .sell-button {
-    padding: 0.7rem 1.5rem;
-    font-size: 0.85rem;
+    padding: 0.8rem 1.8rem;
+    font-size: 0.9rem;
     width: 100%;
+    max-width: 300px;
   }
 
   .chart-box {
-    padding: 1rem;
+    padding: 1.2rem;
     margin-top: 1.5rem;
   }
 
@@ -215,17 +220,22 @@
   }
 
   .info-card {
-    padding: 1rem;
+    padding: 1.2rem;
     margin-top: 1.5rem;
     font-size: 0.9rem;
   }
 
+  .info-card h3 {
+    font-size: 1rem;
+  }
+
   .info-card p {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 
   .how-it-works {
-    padding: 1rem;
+    padding: 1.2rem;
     margin-top: 1.5rem;
   }
 
@@ -236,20 +246,20 @@
 
   .steps-container {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.2rem;
   }
 
   .step-number {
-    width: 35px;
-    height: 35px;
-    font-size: 0.9rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
   }
 
   .step-content h4 {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 
   .step-content p {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
 }

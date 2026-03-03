@@ -90,12 +90,12 @@
 
   .history-table th,
   .history-table td {
-    padding: 0.75rem;
+    padding: 0.8rem;
     font-size: 0.9rem;
   }
 
   .history-table th {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
 
   .status-badge,
