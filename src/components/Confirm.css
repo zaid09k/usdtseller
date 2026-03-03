@@ -1,67 +1,201 @@
 .confirm-container {
   display: flex;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 70px);
   align-items: center;
   justify-content: center;
-  background: #121212;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  padding: 2rem;
 }
 
-.confirm-form, .success-box {
+.confirm-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.confirm-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.confirm-left h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.order-summary {
   background: linear-gradient(135deg, #1a1a1a 0%, #222 100%);
-  padding: 2.5rem;
+  padding: 2rem;
   border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-  width: 380px;
-  text-align: center;
   border: 1px solid #333;
 }
 
-.confirm-form h2, .success-box h2 {
-  margin-bottom: 1.5rem;
-  color: #eee;
-  font-size: 1.5rem;
-  font-weight: 700;
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  font-size: 0.95rem;
 }
 
-.field {
-  margin-bottom: 1rem;
-  text-align: left;
-  background: #282828;
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  border: 1px solid #3a3a3a;
-  color: #fff;
-}
-
-.field label {
-  font-size: 0.85rem;
-  color: #0ea5e9;
+.summary-row .label {
+  color: #aaa;
   text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.85rem;
   letter-spacing: 0.5px;
-  font-weight: 700;
-  display: block;
-  margin-bottom: 0.3rem;
 }
 
-.field div {
-  margin-top: 0.5rem;
-  font-weight: 700;
+.summary-row .value {
   color: #fff;
+  font-weight: 700;
   font-size: 1.1rem;
 }
 
-.address-row {
+.summary-row.highlight {
+  background: rgba(14, 165, 233, 0.1);
+  padding: 1.25rem;
+  border-radius: 8px;
+  margin: 0;
+  border: 1px solid #0ea5e9;
+}
+
+.summary-row.highlight .price {
+  color: #0ea5e9;
+  font-size: 1.3rem;
+}
+
+.network-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+  color: white;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.divider {
+  height: 1px;
+  background: #333;
+  margin: 0.5rem 0;
+}
+
+.payment-steps {
+  background: linear-gradient(135deg, #1a1a1a 0%, #222 100%);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid #333;
+}
+
+.payment-steps h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 0 0 1.5rem 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.step {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #0ea5e9 0%, #00bcd4 100%);
+  color: #000;
+  border-radius: 50%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-content strong {
+  color: #fff;
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.step-content p {
+  color: #aaa;
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.confirm-form {
+  background: linear-gradient(135deg, #1a1a1a 0%, #222 100%);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(14, 165, 233, 0.15);
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-title h2 {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin: 0 0 0.3rem 0;
+  text-transform: uppercase;
+}
+
+.form-title .subtitle {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.address-section {
+  margin-bottom: 2rem;
+}
+
+.address-section > label {
+  display: block;
+  color: #0ea5e9;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.address-box {
+  display: flex;
   gap: 0.75rem;
+  align-items: stretch;
+  margin-bottom: 0.5rem;
 }
 
 .receive-address {
+  flex: 1;
   font-family: 'Courier New', monospace;
-  font-size: 0.9rem;
-  background: #1a1a1a;
-  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  background: #1f1f1f;
+  padding: 1rem;
   border-radius: 8px;
   border: 1px solid #3a3a3a;
   color: #0ea5e9;
@@ -70,166 +204,344 @@
 }
 
 .copy-btn {
-  padding: 0.6rem 1rem;
-  background: linear-gradient(135deg, #0ea5e9 0%, #0096d6 100%);
-  color: white;
+  padding: 1rem 1.2rem;
+  background: linear-gradient(135deg, #0ea5e9 0%, #00bcd4 100%);
+  color: #000;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-weight: 700;
-  font-size: 0.85rem;
+  font-weight: 800;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+  box-shadow: 0 6px 16px rgba(14, 165, 233, 0.3);
+  white-space: nowrap;
 }
 
 .copy-btn:hover {
-  background: linear-gradient(135deg, #0096d6 0%, #0077aa 100%);
-  box-shadow: 0 6px 16px rgba(14, 165, 233, 0.4);
+  background: linear-gradient(135deg, #00bcd4 0%, #0ea5e9 100%);
+  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.4);
   transform: translateY(-2px);
 }
 
-.receive-section {
-  margin-top: 1rem;
-  text-align: left;
-}
-
-.receive-section label {
+.network-info {
   display: block;
-  font-size: 0.85rem;
-  color: #0ea5e9;
+  color: #666;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-  letter-spacing: 0.5px;
-}
-
-.success-box {
-  width: 420px;
-  padding: 1.8rem;
-}
-
-.confirm-form {
-  width: 360px;
-  padding: 1.6rem;
-}
-
-.confirm-form h2, .success-box h2 {
-  font-size: 1.25rem;
-}
-
-.confirm-form input {
-  padding: 0.7rem 0.9rem;
-}
-
-.confirm-form input {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  margin-bottom: 1rem;
-  border: 2px solid #444;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  background: #222;
-  color: #eee;
-  box-sizing: border-box;
-  transition: all 0.3s ease;
-}
-
-.confirm-form input:focus {
-  outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
-}
-
-.confirm-form input::placeholder {
-  color: #888;
-}
-
-.confirm-form button, .success-box button {
-  width: 100%;
-  padding: 1rem;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 1rem;
-  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.confirm-form button:hover, .success-box button:hover {
-  background: linear-gradient(135deg, #059669 0%, #047857 100%);
-  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
-  transform: translateY(-2px);
-}
-
-.success-box p {
-  color: #ccc;
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
-}
-
-.status-badge {
-  display: inline-block;
-  background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.telegram-message {
-  background: rgba(14, 165, 233, 0.1);
-  border-left: 4px solid #0ea5e9;
-  padding: 1.25rem;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-  color: #0ea5e9;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  font-weight: 500;
-}
-
-.order-id-box {
-  background: #222;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.order-id-box span {
-  display: block;
-  font-size: 0.75rem;
-  color: #aaa;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
   font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.order-id {
-  font-size: 1.3rem;
-  font-weight: 900;
-  color: #0ea5e9;
-  font-family: 'Courier New', monospace;
-  letter-spacing: 1px;
-  text-align: center;
 }
 
 .error {
   color: #ff6b6b;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-weight: 600;
   background: rgba(255, 107, 107, 0.15);
   padding: 1rem;
   border-radius: 8px;
   border-left: 3px solid #ff6b6b;
+  font-size: 0.9rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  color: #0ea5e9;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  padding: 0.95rem 1.25rem;
+  border: 2px solid #3a3a3a;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: #1f1f1f;
+  color: #fff;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+  background: #242424;
+}
+
+.form-input::placeholder {
+  color: #666;
+}
+
+.confirm-btn {
+  padding: 1.1rem;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.confirm-btn:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  box-shadow: 0 12px 35px rgba(16, 185, 129, 0.4);
+  transform: translateY(-2px);
+}
+
+.security-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #10b981;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.lock-icon {
+  font-size: 1rem;
+}
+
+/* SUCCESS SCREEN */
+
+.success-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #222 100%);
+  padding: 3rem;
+  border-radius: 24px;
+  border: 1px solid #333;
+  box-shadow: 0 20px 60px rgba(16, 185, 129, 0.15);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.success-animation {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0 auto 1.5rem;
+  animation: scaleIn 0.6s ease-out;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.success-card h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+}
+
+.success-message {
+  color: #aaa;
+  font-size: 0.95rem;
+  margin: 0 0 2rem 0;
+}
+
+.order-details {
+  background: rgba(14, 165, 233, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border: 1px solid #0ea5e9;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #333;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-item .label {
+  color: #aaa;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.detail-item .order-id,
+.detail-item .amount,
+.detail-item .network {
+  color: #0ea5e9;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: 'Courier New', monospace;
+}
+
+.detail-item .status-badge {
+  color: #f59e0b;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.payment-address-section {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.payment-address-section h3 {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+
+.next-steps {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.next-steps h3 {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+
+.step-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  align-items: flex-start;
+}
+
+.step-item .check {
+  color: #10b981;
+  font-weight: 900;
+  min-width: 24px;
+}
+
+.step-item p {
+  color: #aaa;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.telegram-info {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.telegram-info .icon {
+  font-size: 2rem;
+}
+
+.telegram-info .info-text {
+  text-align: left;
+}
+
+.telegram-info strong {
+  display: block;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.telegram-info p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.home-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #0ea5e9 0%, #00bcd4 100%);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 25px rgba(14, 165, 233, 0.3);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.home-btn:hover {
+  background: linear-gradient(135deg, #00bcd4 0%, #0ea5e9 100%);
+  box-shadow: 0 12px 35px rgba(14, 165, 233, 0.4);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .confirm-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .confirm-left {
+    gap: 1.5rem;
+    order: 2;
+  }
+
+  .confirm-form {
+    order: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .confirm-container {
+    padding: 1rem;
+  }
+
+  .payment-steps {
+    display: none;
+  }
+
+  .success-card {
+    padding: 1.5rem;
+  }
+
+  .order-details {
+    padding: 1rem;
+  }
 }

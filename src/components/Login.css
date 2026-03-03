@@ -3,80 +3,269 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
-  background: #121212;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  padding: 2rem;
+}
+
+.login-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.login-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.login-brand {
+  text-align: left;
+}
+
+.brand-logo {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.login-brand h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #0ea5e9 0%, #00bcd4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-tagline {
+  font-size: 1rem;
+  color: #aaa;
+  margin: 0.5rem 0 0 0;
+  font-weight: 500;
+}
+
+.trust-badges {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.badge {
+  background: rgba(14, 165, 233, 0.1);
+  border: 1px solid #0ea5e9;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.badge-icon {
+  font-size: 1.5rem;
+}
+
+.badge-text {
+  font-size: 0.85rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.info-section {
+  background: linear-gradient(135deg, #1a1a1a 0%, #222 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #10b981;
+}
+
+.info-section h3 {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.info-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.info-section li {
+  color: #aaa;
+  font-size: 0.9rem;
 }
 
 .login-form {
   background: linear-gradient(135deg, #1a1a1a 0%, #222 100%);
   padding: 2.5rem;
-  border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-  width: 340px;
-  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(14, 165, 233, 0.15);
   backdrop-filter: blur(10px);
   border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
 }
 
-.login-form h2 {
-  margin-bottom: 1.5rem;
+.form-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-header h2 {
   color: #fff;
   font-size: 1.8rem;
-  font-weight: 800;
+  font-weight: 900;
+  margin: 0 0 0.5rem 0;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
-.login-form input {
-  width: 100%;
-  padding: 0.85rem 1rem;
-  margin-bottom: 1rem;
-  border: 2px solid #3a3a3a;
-  border-radius: 8px;
+.form-header p {
+  color: #aaa;
   font-size: 0.95rem;
-  background: #1a1a1a;
-  color: #fff;
-  box-sizing: border-box;
-  transition: all 0.3s ease;
-}
-
-.login-form input:focus {
-  outline: none;
-  border-color: #0ea5e9;
-  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
-  background: #1f1f1f;
-}
-
-.login-form input::placeholder {
-  color: #888;
-}
-
-.login-form button {
-  width: 100%;
-  padding: 1rem;
-  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 1rem;
-  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.login-form button:hover {
-  background: linear-gradient(135deg, #0056b3 0%, #003a7a 100%);
-  box-shadow: 0 8px 28px rgba(0, 123, 255, 0.4);
-  transform: translateY(-2px);
+  margin: 0;
 }
 
 .error {
-  color: #e53e3e;
-  margin-bottom: 1rem;
+  color: #ff6b6b;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  background: rgba(255, 107, 107, 0.15);
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 3px solid #ff6b6b;
+  font-size: 0.9rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  color: #0ea5e9;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  padding: 0.95rem 1.25rem;
+  border: 2px solid #3a3a3a;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  background: #1f1f1f;
+  color: #fff;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
   font-weight: 500;
-  background: rgba(229, 62, 62, 0.1);
-  padding: 0.75rem;
-  border-radius: 6px;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.2);
+  background: #242424;
+}
+
+.form-input::placeholder {
+  color: #666;
+}
+
+.login-btn {
+  padding: 1.1rem;
+  background: linear-gradient(135deg, #0ea5e9 0%, #00bcd4 100%);
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 25px rgba(14, 165, 233, 0.3);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #00bcd4 0%, #0ea5e9 100%);
+  box-shadow: 0 12px 35px rgba(14, 165, 233, 0.4);
+  transform: translateY(-2px);
+}
+
+.security-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #10b981;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.form-footer {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+}
+
+.form-footer p {
+  color: #666;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .login-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .login-left {
+    gap: 2rem;
+  }
+
+  .login-brand h1 {
+    font-size: 2rem;
+  }
+
+  .trust-badges {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .login-container {
+    padding: 1rem;
+  }
+
+  .login-left {
+    display: none;
+  }
+
+  .login-form {
+    padding: 1.5rem;
+  }
+
+  .form-header h2 {
+    font-size: 1.5rem;
+  }
 }
