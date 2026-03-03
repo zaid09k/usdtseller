@@ -77,3 +77,73 @@
   color: #0ea5e9;
   font-size: 0.85rem;
 }
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .history-container {
+    padding: 1.5rem;
+  }
+
+  .history-container h2 {
+    font-size: 1.3rem;
+  }
+
+  .history-table th,
+  .history-table td {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .history-table th {
+    font-size: 0.75rem;
+  }
+
+  .status-badge,
+  .network-badge {
+    padding: 0.3rem 0.6rem !important;
+    font-size: 0.7rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .history-container {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .history-container h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .history-table {
+    font-size: 0.75rem;
+  }
+
+  .history-table th,
+  .history-table td {
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  .history-table th {
+    font-size: 0.65rem;
+  }
+
+  .order-id-cell {
+    font-size: 0.7rem !important;
+    max-width: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .status-badge,
+  .network-badge {
+    padding: 0.25rem 0.5rem !important;
+    font-size: 0.65rem !important;
+  }
+
+  .history-table tr:hover {
+    background: rgba(51, 51, 51, 0.5);
+  }
+}
