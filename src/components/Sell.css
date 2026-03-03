@@ -123,3 +123,57 @@
   padding: 0.75rem;
   border-radius: 6px;
 }
+
+.sell-address {
+  margin-left: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  max-width: 420px;
+}
+
+.sell-address h4 {
+  margin: 0 0 0.75rem 0;
+  color: #1a202c;
+}
+
+.address-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.address-label {
+  font-size: 0.85rem;
+  color: #718096;
+  min-width: 80px;
+}
+
+.address-value {
+  flex: 1;
+  font-family: monospace;
+  background: #f7fafc;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #edf2f7;
+  color: #2d3748;
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.copy-btn {
+  padding: 0.5rem 0.8rem;
+  background: linear-gradient(135deg,#007bff 0%,#0056b3 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.address-note {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: #718096;
+}
