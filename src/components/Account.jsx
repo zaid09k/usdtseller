@@ -15,48 +15,66 @@ export default function Account() {
 
   return (
     <div className="account-container">
-      <h2>Account Details</h2>
+      <div className="account-header">
+        <h2>Account Dashboard</h2>
+        <p className="subtitle">Overview of your USDT transactions & profile</p>
+      </div>
 
-      <div className="account-grid">
-        <div className="account-card">
-          <label>User ID</label>
-          <div className="value">{user.id}</div>
+      <div className="account-main">
+        <div className="profile-section">
+          <div className="profile-card">
+            <div className="avatar">👤</div>
+            <h3>#{user.id}</h3>
+            <p>Member since {new Date(user.joined).toLocaleDateString()}</p>
+          </div>
         </div>
-        <div className="account-card">
-          <label>Joined</label>
-          <div className="value">{new Date(user.joined).toLocaleDateString()}</div>
-        </div>
-        <div className="account-card">
-          <label>Total Orders</label>
-          <div className="value">{totalOrders}</div>
-        </div>
-        <div className="account-card">
-          <label>Total USDT Sold</label>
-          <div className="value">{totalUSDT.toFixed(4)}</div>
-        </div>
-        <div className="account-card">
-          <label>Total INR Received</label>
-          <div className="value">₹ {totalINR}</div>
+
+        <div className="stats-section">
+          <div className="stats-grid">
+            <div className="stats-card">
+              <span className="icon">📦</span>
+              <div className="details">
+                <label>Total Orders</label>
+                <div className="value">{totalOrders}</div>
+              </div>
+            </div>
+
+            <div className="stats-card">
+              <span className="icon">💱</span>
+              <div className="details">
+                <label>USDT Sold</label>
+                <div className="value">{totalUSDT.toFixed(4)}</div>
+              </div>
+            </div>
+
+            <div className="stats-card">
+              <span className="icon">💰</span>
+              <div className="details">
+                <label>INR Received</label>
+                <div className="value">₹ {totalINR}</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="chart-section">
-        <h3>✓ Your Account Stats</h3>
-        <p className="stats-text">Keep track of your USDT sales and earnings through this dashboard. All orders are securely stored and verified.</p>
+        <h3>Sales Summary</h3>
+        <p className="stats-text">Visualize your USDT selling performance over time. (Chart placeholder)</p>
       </div>
 
       <div className="support-section">
-        <h3>Support</h3>
+        <h3>Need Support?</h3>
         <div className="support-content">
           <div className="chat-icon">💬</div>
           <p>
-            Have questions about USDT market or your orders?<br />
-            <strong>Get instant help from our team!</strong>
+            Questions about orders or rates?<br />
+            <strong>We're here to help 24/7!</strong>
           </p>
           <div className="support-message">
-            <strong>Need help? Contact us on Telegram</strong><br />
+            <strong>Contact us on Telegram</strong><br />
             <span>Include your order ID</span><br />
-            <span className="contact">Our representative: @zaidtx</span>
+            <span className="contact">@zaidtx</span>
           </div>
         </div>
       </div>
