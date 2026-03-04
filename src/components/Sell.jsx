@@ -9,7 +9,7 @@ export default function Sell() {
   const [error, setError] = useState('');
   const navigate = useNavigate();
   const { user } = useAuth();
-  const rate = 116.73; // INR per USDT
+  const rate = 116.43; // INR per USDT
   const minAmount = 50;
 
   const converted = () => {

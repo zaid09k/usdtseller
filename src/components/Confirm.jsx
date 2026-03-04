@@ -55,8 +55,8 @@ export default function Confirm() {
   const submit = (e) => {
     e.preventDefault();
     setError('');
-    if (!upi.trim() || !hash.trim()) {
-      setError('Please enter both UPI ID and transaction hash.');
+    if (!upi.trim()) {
+      setError('Please enter your UPI ID.');
       return;
     }
 
@@ -153,11 +153,11 @@ export default function Confirm() {
             </div>
 
             <div className="form-group">
-              <label htmlFor="hash">Transaction Hash (TX ID)</label>
+              <label htmlFor="hash">Transaction Hash (TX ID) <span className="optional">(Optional)</span></label>
               <input
                 id="hash"
                 type="text"
-                placeholder="Paste transaction hash"
+                placeholder="Paste transaction hash (optional)"
                 value={hash}
                 onChange={(e) => setHash(e.target.value)}
                 className="form-input"
