@@ -19,7 +19,7 @@ export default function Login() {
 
   async function submitLogin(userUid, userPassword) {
     try {
-      const response = await fetch('/api/login', {
+      const response = await fetch('https://earnest-heart-production-adc7.up.railway.app/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
