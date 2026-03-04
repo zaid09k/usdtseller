@@ -17,6 +17,35 @@ export default function Login() {
     }
   }, [user, navigate]);
 
+  async function submitLogin(userUid, userPassword) {
+    try {
+      const response = await fetch('/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          uid: userUid,
+          password: userPassword 
+        })
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        console.log('Yay! You are logged in:', data.message);
+        login(userUid, userPassword);
+      } else {
+        console.error('Login failed:', data.message);
+        setError(data.message || 'Login failed. Please try again.');
+      }
+
+    } catch (error) {
+      console.error('Network or server error occurred:', error);
+      setError('Network or server error occurred. Please try again.');
+    }
+  }
+
   const submit = (e) => {
     e.preventDefault();
     setError('');
@@ -24,12 +53,7 @@ export default function Login() {
       setError('Please enter both user ID and password.');
       return;
     }
-    const result = login(id, password);
-    if (!result) {
-      setError('Invalid user ID or password.');
-      return;
-    }
-    navigate('/');
+    submitLogin(id, password);
   };
 
   return (
