@@ -94,7 +94,7 @@ export default function Login() {
 
         <form className="login-form" onSubmit={submit}>
           <div className="form-header">
-            <h2>Secure Login</h2>
+            <h2>WELCOME BACK !</h2>
             <p>Access your USDT selling dashboard</p>
           </div>
 
@@ -132,7 +132,7 @@ export default function Login() {
           </div>
 
           <div className="form-footer">
-            <p>First time? Contact support to create an account</p>
+            <p>First time? Contact telegram support to create an account @USDTSELLERBOT</p>
           </div>
         </form>
       </div>

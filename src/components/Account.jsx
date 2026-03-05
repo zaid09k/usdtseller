@@ -42,7 +42,7 @@ export default function Account() {
             <div className="stats-card">
               <span className="icon">💱</span>
               <div className="details">
-                <label>USDT Sold</label>
+                <label>Total USDT Order</label>
                 <div className="value">{totalUSDT.toFixed(4)}</div>
               </div>
             </div>
@@ -50,7 +50,7 @@ export default function Account() {
             <div className="stats-card">
               <span className="icon">💰</span>
               <div className="details">
-                <label>INR Received</label>
+                <label>INR Payout ⭐</label>
                 <div className="value">₹ {totalINR}</div>
               </div>
             </div>
@@ -74,7 +74,7 @@ export default function Account() {
           <div className="support-message">
             <strong>Contact us on Telegram</strong><br />
             <span>Include your order ID</span><br />
-            <span className="contact">@zaidtx</span>
+            <span className="contact">@Usdtseller_support</span>
           </div>
         </div>
       </div>

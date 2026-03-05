@@ -4,7 +4,7 @@ import './Dashboard.css';
 
 export default function Dashboard() {
   const navigate = useNavigate();
-  const rate = 116.73;
+  const rate = 116.43;
 
   const startSell = () => {
     navigate('/sell');
@@ -59,7 +59,7 @@ export default function Dashboard() {
             <div className="step-number">4</div>
             <div className="step-content">
               <h4>Get Notified</h4>
-              <p>Receive Telegram message on verification</p>
+              <p>Receive Telegram message after verification</p>
             </div>
           </div>
         </div>
