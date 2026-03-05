@@ -94,7 +94,7 @@ export default function Login() {
 
         <form className="login-form" onSubmit={submit}>
           <div className="form-header">
-            <h2>WELCOME BACK !</h2>
+            <h2>WELCOME BACK!</h2>
             <p>Access your USDT selling dashboard</p>
           </div>
 
